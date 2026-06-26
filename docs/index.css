@@ -1,7 +1,6 @@
 /* Fonts */
-html, body {
-    font-family:'PT Serif', Times, serif;
-    background-color: var(--cnavy);
+main {
+    font-family: 'PT Serif', Times, serif;
 }
 main > div > small {
     font-family: 'Asap Condensed', sans-serif;
@@ -11,6 +10,10 @@ main > div > small {
 }
 .small-screen-link {
     font-family: 'Catamaran', sans-serif;
+}
+
+html, body {
+    background-color: var(--cnavy);
 }
 
 /* Title */
@@ -48,6 +51,7 @@ main > div {
     max-width: 90%;
     border: 3px solid var(--cbeige);
     border-bottom: none;
+    border-radius: 2rem 2rem 0 0;
 }
 main > div > .title-space {
     height: 6.25rem;

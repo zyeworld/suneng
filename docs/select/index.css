@@ -8,9 +8,9 @@
 
 /* WIP notice */
 .wip {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 2rem;
     padding: 0.25rem 0;
-    border-radius: 3rem;
+    /* border-radius: 3rem; */
     font-family: 'Roboto Slab', serif;
     text-align: center;
     color: var(--cbeige);

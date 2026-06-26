@@ -1,13 +1,19 @@
 /* Fonts */
-html, body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--cnavy);
+main {
+    font-family: 'Noto Sans KR', Times, serif;
 }
 .korean {
     font-family: 'Noto Sans KR', sans-serif;
 }
+h1, h2 {
+    font-family: 'PT Serif', Times, serif;
+}
 .home {
     font-family: 'Catamaran', sans-serif;
+}
+
+html, body {
+    background-color: var(--cnavy);
 }
 
 /* Main */
