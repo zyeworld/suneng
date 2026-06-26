@@ -4,9 +4,13 @@ html {
     --cblack: black;
     --cpaper: #fffbf7;
     --cbeige: #d8d1c7;
-    --cselect: #f6efdc;
     --cnavy: #475365;
     --cshadow: #504d4b;
+    --buttongrad: linear-gradient(
+        0deg,
+        rgba(20, 167, 62, 1) 0%,
+        rgba(102, 247, 113, 1) 100%
+    );
 }
 
 html, body {

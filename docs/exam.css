@@ -91,12 +91,12 @@
 
 /* Resetting question or page */
 .exam section.question-reset-23 {
-    /* used in 2021~ */
-    counter-reset: page 0 question 22;
+    /* used in 2022~ */
+    counter-set: page 0 question 22;
 }
 .exam section.question-reset-26 {
-    /* used in 2006~2013 */
-    counter-reset: question 25;
+    /* used in 2005~2011 */
+    counter-set: question 25;
 }
 
 /* Title (first page) */

@@ -24,7 +24,9 @@ Solutions to exams since 2006 can be found in [EBSi](https://www.ebsi.co.kr/ebs/
 ## What is this project?
 
 Suneung math exams translated to English — “SunEng.”
+
 Compared to the infamy, I've rarely seen the exam translated for the global audience to examine. So I'm making a database myself.
+
 This is a personal passion project.
 I cannot guarantee that all exams will be translated.
 
@@ -33,6 +35,7 @@ I cannot guarantee that all exams will be translated.
 ## Why only the math exams?
 
 Well, the Language Arts exams are simply impossible to translate — _how would I translate poems while maintaining rhymes?_ — and the English exams are already in English.
+
 Science exams require a lot of work to translate, since they contain loads of diagrams with Korean text.
 
 ## What's special about Suneung math?
