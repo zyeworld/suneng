@@ -1,37 +1,44 @@
+/* Fonts */
 html, body {
-    font-family:'PT Serif', Times, serif;
-    background-color: var(--color-bg);
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--cnavy);
 }
 .korean {
     font-family: 'Noto Sans KR', sans-serif;
+}
+.home {
+    font-family: 'Catamaran', sans-serif;
 }
 
 /* Main */
 main {
     margin: 5rem 0;
-    color: var(--color-black);
+    color: var(--cblack);
     font-size: 1.2rem;
     text-align: left;
     padding: 0;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 main > div {
     position: relative;
     width: 794px;
     max-width: 90%;
-    background-color: var(--color-beige);
+    margin-bottom: 2rem;
+    border-radius: 2rem;    
+    background-color: var(--cbeige);
 }
 article {
     padding: 0 3rem 3rem;
 }
 
 /* Contents */
-p, main > div div {
+p, article div {
     margin-bottom: 0.5rem;
 }
-h1, h2 { color: var(--color-bg); }
+h1, h2 { color: var(--cnavy); }
 h1 {
     margin: 0.5em 0;
     text-align: center;
@@ -39,17 +46,16 @@ h1 {
 }
 hr {
     margin: 0;
-    border: 1px solid var(--color-bg);
+    border: 1px solid var(--cnavy);
 }
 abbr { font-weight: bold; }
 .u { text-decoration: underline; }
-main a {
-    color: var(--color-bg);
-    text-shadow: var(--color-shadow) 0 0 1px;
+article a {
+    color: var(--cnavy);
 }
-main a:hover {
-    color: var(--color-beige);
-    background-color: var(--color-bg);
+article a:hover {
+    color: var(--cbeige);
+    background-color: var(--cnavy);
 }
 
 /* Home link */
@@ -65,11 +71,10 @@ main a:hover {
     line-height: 3rem;
     text-align: center;
 
-    font-family: 'Catamaran', sans-serif;
-    color: var(--color-bg);
-    border: 3px solid var(--color-bg);
+    color: var(--cnavy);
+    border: 3px solid var(--cnavy);
     border-radius: 3rem;
-    background-color: var(--color-beige);
+    background-color: var(--cbeige);
 
     transition: transform 0.2s;
 }
@@ -85,29 +90,24 @@ main a:hover {
 
 @media screen and (max-width: 720px) {
     main { margin-top: 0; margin-bottom: 0; }
-    main > div { max-width: 100%; }
+    main > div {
+        max-width: 100%;
+        border-radius: 0;
+    }
     article {
         padding: 0 1.5rem 3rem;
     }
     .home {
         top: 0.5rem;
         left: 0.5rem;
-        color: var(--color-beige);
-        border: 3px solid var(--color-beige);
-        background-color: var(--color-bg);
+        color: var(--cbeige);
+        border: 3px solid var(--cbeige);
+        background-color: var(--cnavy);
     }
 }
 
 /* Print */
 @media print {
-    :root {
-        --color-bg: black;
-        --color-beige: white;
-    }
-    html, body {
-        margin: 0;
-        padding: 0;
-    }
     main {
         margin-top: 0;
         margin-bottom: 0;

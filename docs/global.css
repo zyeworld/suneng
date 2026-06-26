@@ -1,15 +1,34 @@
 html {
-    --color-white: white;
-    --color-gray: #ccc;
-    --color-black: black;
-    --color-paper: #fffbf7;
-    --color-beige: #d8d1c7;
-    --color-select: #ffe6c0;
-    --color-bg: #475365;
-    --color-shadow: #504d4b;
+    --cwhite: white;
+    --cgray: #ccc;
+    --cblack: black;
+    --cpaper: #fffbf7;
+    --cbeige: #d8d1c7;
+    --cselect: #f6efdc;
+    --cnavy: #475365;
+    --cshadow: #504d4b;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+}
+
+/* Hide and Show with size */
+.show400 { display: none; }
+@media screen and (max-width: 400px) {
+    .show400 { display: initial; }
+    .hide400 { display: none; }
+}
+
+/* Print */
+@media print {
+    :root {
+        --cnavy: black;
+        --cbeige: white;
+    }
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
 }

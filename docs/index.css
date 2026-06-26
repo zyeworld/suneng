@@ -1,6 +1,16 @@
-html {
+/* Fonts */
+html, body {
     font-family:'PT Serif', Times, serif;
-    background-color: var(--color-bg);
+    background-color: var(--cnavy);
+}
+main > div > small {
+    font-family: 'Asap Condensed', sans-serif;
+}
+.exam-container a {
+    font-family: 'PT Serif', Times, serif;
+}
+.small-screen-link {
+    font-family: 'Catamaran', sans-serif;
 }
 
 /* Title */
@@ -23,7 +33,7 @@ html {
 main {
     position: absolute;
     inset: 5rem 0 0;
-    color: var(--color-beige);
+    color: var(--cbeige);
     font-size: 1.2rem;
     text-align: center;
 
@@ -36,7 +46,7 @@ main > div {
     position: relative;
     width: 794px;
     max-width: 90%;
-    border: 3px solid var(--color-beige);
+    border: 3px solid var(--cbeige);
     border-bottom: none;
 }
 main > div > .title-space {
@@ -47,21 +57,20 @@ main > div > .title-space {
 main > div > small {
     position: absolute;
     left: 0.125rem;
-    font-family: 'Asap Condensed', sans-serif;
     margin-top: -1.125rem;
 }
 
 /* Flavor text */
 .flavor-text {
     height: 40px;
-    background-color: var(--color-beige);
+    background-color: var(--cbeige);
     font-size: 20px;
     line-height: 40px;
     font-weight: bold;
     font-style: italic;
     text-align: center;
     white-space: pre;
-    color: var(--color-bg);
+    color: var(--cnavy);
 }
 
 /* Links */
@@ -74,17 +83,16 @@ a { text-decoration: none; }
     padding: 0.25rem;
 
     font-size: 3rem;
-    font-family: 'PT Serif', Times, serif;
     font-weight: bold;
     text-align: center;
-    color: var(--color-beige);
-    background-color: var(--color-black);
+    color: var(--cbeige);
+    background-color: var(--cblack);
 
     transition: transform 0.2s;
 }
 
 .exam-container a:hover {
-    background-color: var(--color-bg);
+    background-color: var(--cnavy);
     transform: scale(1.1);
 }
 
@@ -92,17 +100,16 @@ a { text-decoration: none; }
 .small-screen-link {
     display: none;
     margin: 1.5rem 3rem 0;
-    border: 1px solid var(--color-beige);
+    border: 1px solid var(--cbeige);
     border-radius: 25px;
     padding: 0;
-    box-shadow: var(--color-black) 4px 4px 3px;
+    box-shadow: var(--cblack) 4px 4px 3px;
 
     font-size: 2rem;
-    font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     text-align: center;
-    color: var(--color-bg);
-    background-color: var(--color-beige);
+    color: var(--cnavy);
+    background-color: var(--cbeige);
 }
 
 
@@ -121,8 +128,8 @@ a { text-decoration: none; }
     position: absolute;
     width: 794px;
     min-height: 1123px;
-    box-shadow: var(--color-shadow) 6px 6px 10px;
-    background-color: var(--color-beige);
+    box-shadow: var(--cshadow) 6px 6px 10px;
+    background-color: var(--cbeige);
 }
 .exam-page:nth-of-type(1) {
     transform: rotate(-2deg) translate(-0.3%, 2%);
@@ -141,7 +148,7 @@ a { text-decoration: none; }
     margin: 0;
     padding-bottom: 0;
     grid-template-rows: minmax(48px, auto) 1fr;
-    background-color: var(--color-beige);
+    background-color: var(--cbeige);
 }
 
 /* Gradient */
@@ -150,17 +157,7 @@ main::after {
     position: absolute;
     inset: auto 0 0;
     height: 20%;
-    background: linear-gradient(180deg, transparent 0%, var(--color-bg) 80%);
-}
-
-/* Responsive */
-@media only screen and (max-height: 600px) {
-    main::after {
-        height: 15%;
-        background: linear-gradient(180deg, transparent 0%, var(--color-bg) 90%);
-    }
-    main, #title { top: 0; }
-    main > div { border-top: none; }
+    background: linear-gradient(180deg, transparent 0%, var(--cnavy) 80%);
 }
 
 @media only screen and (max-width: 720px) {
@@ -171,8 +168,19 @@ main::after {
 
     .small-screen-link { display: block; }
     .exam-container a { display: none; }
-    .exam-container2 { transform: translate(-50%, 2rem) scale(0.9) skew(2deg, 358deg); }
+    .exam-container2 { transform: translate(-50%, 0) scale(0.9) skew(2deg, 358deg); }
 }
+
+/* Responsive */
+@media only screen and (max-height: 600px) {
+    main::after {
+        height: 15%;
+        background: linear-gradient(180deg, transparent 0%, var(--cnavy) 90%);
+    }
+    main, #title { top: 0; }
+    main > div { border-top: none; }
+}
+
 
 @media only screen and (max-width: 480px) {
     .exam-container2 { transform: translate(-50%, -5rem) scale(0.75) skew(2deg, 358deg); }
