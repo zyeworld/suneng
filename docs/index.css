@@ -35,7 +35,7 @@ html, body {
 /* Main */
 main {
     margin-top: 5rem;
-    min-height: 100vh;
+    min-height: max(100vh, 30rem);
     color: var(--cbeige);
     text-align: center;
 
@@ -171,7 +171,7 @@ footer {
     #title { top: 0; }
     main { margin-top: 0; }
     main > div { max-width: 100%; border: none; }
-    main > div > small { display: none; }
+    .name-text { display: none; }
 
     .small-screen-link { display: block; }
     .exam-container a { display: none; }
@@ -180,11 +180,12 @@ footer {
 
 /* Responsive */
 @media only screen and (max-height: 600px) {
-    main::after {
+    footer {
         height: 15%;
         background: linear-gradient(180deg, transparent 0%, var(--cnavy) 90%);
     }
-    main, #title { top: 0; }
+    #title { top: 0; }
+    main { margin-top: 0; }
     main > div { border-top: none; }
 }
 
