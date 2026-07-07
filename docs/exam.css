@@ -319,15 +319,15 @@
 
 /* Lists */
 /* (A) (B) (C) - used in .box on its own */
-.exam ol.upper {
+.exam ol.upper, .exam ol.lower {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
     list-style-type: none;
     /* Why is ::marker not supported on my phone? */
 }
-.exam ol.upper > li { margin: 2px 0 2px 24px; }
-.exam ol.upper > li::before {
+.exam ol.upper > li, .exam ol.lower > li { margin: 2px 0 2px 24px; }
+.exam ol.upper > li::before, .exam ol.lower > li::before {
     display: inline-block;
     letter-spacing: -0.5px;
     width: 24px;
@@ -336,6 +336,9 @@
 .exam ol.upper > li:nth-child(1)::before { content: "(A)"; }
 .exam ol.upper > li:nth-child(2)::before { content: "(B)"; }
 .exam ol.upper > li:nth-child(3)::before { content: "(C)"; }
+.exam ol.lower > li:nth-child(1)::before { content: "(a)"; }
+.exam ol.lower > li:nth-child(2)::before { content: "(b)"; }
+.exam ol.lower > li:nth-child(3)::before { content: "(c)"; }
 
 /* Bullet points - used in .box */
 .exam .box ul {
