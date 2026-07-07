@@ -46,7 +46,7 @@ main {
 }
 main > div {
     position: relative;
-    width: 794px;
+    width: 840px;
     max-width: 90%;
     border: 3px solid var(--cbeige);
     border-bottom: none;
