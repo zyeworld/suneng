@@ -1,0 +1,19 @@
+@keyframes fish {
+    0% {transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);} 
+}
+.fish {
+    animation: fish 1s ease-in-out 0s infinite alternate;
+}
+
+.details1 {
+    border: 2px solid var(--cnavy);
+    border-radius: 1rem;
+}
+
+.exam {
+    margin: 0 0 2rem;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+}

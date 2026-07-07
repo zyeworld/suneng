@@ -6,9 +6,9 @@ main {
     font-family: 'Noto Sans KR', sans-serif;
 }
 h1, h2 {
-    font-family: 'PT Serif', Times, serif;
+    font-family: 'PT Serif', 'Libertinus Math', Times, serif;
 }
-.home {
+.home, .links > a {
     font-family: 'Catamaran', sans-serif;
 }
 .details0 > summary, .details1 > summary {
@@ -65,6 +65,9 @@ hr {
     margin: 0;
     border: 1px solid var(--cnavy);
 }
+li {
+    margin-top: 0.5rem;
+}
 abbr { font-weight: bold; }
 .u { text-decoration: underline; }
 article a {
@@ -73,6 +76,10 @@ article a {
 article a:hover {
     color: var(--cbeige);
     background-color: var(--cnavy);
+}
+.center {
+    display: flex;
+    justify-content: center;
 }
 
 /* Summary */
@@ -93,7 +100,7 @@ summary::marker { content: '' }
     transition: outline-width 0.1s;
 }
 .details0[open] { padding-bottom: 0; }
-.details0:hover { outline-width: 4px; }
+.details0:hover { outline-width: 0.25rem; }
 .details0[open]:hover { outline-width: 0; }
 
 .details0 > summary {
@@ -130,7 +137,6 @@ summary::marker { content: '' }
 }
 
 /* Details - inside the article */
-.details1 { border-top: 2px solid var(--cnavy); }
 .details1 > summary {
     font-size: 1.25rem;
     padding: 0.75rem 0 0.75rem 3rem;
@@ -155,6 +161,48 @@ summary::marker { content: '' }
 .details1[open] > summary::before {
     transform: translate(-0.15rem, 0.3rem) rotate(90deg);
 }
+
+
+/* link container */
+.links {
+    margin: 0 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    align-items: stretch;
+}
+.links > a {
+    flex: 1 1 20%;
+    max-width: 20rem;
+    margin: 0;
+    padding: 0.375rem 0;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--cnavy);
+    background-color: var(--cpaper);
+}
+.links > a:hover {
+    outline: 3px solid var(--cnavy);
+}
+.links > a:active {
+    color: var(--cbeige);
+    background-color: var(--cnavy);
+}
+.links > a:first-of-type {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.links > a:last-of-type {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
 
 /* Home link */
 .home {
@@ -196,6 +244,9 @@ summary::marker { content: '' }
     }
     .details0 {
         border-radius: 0;
+    }
+    .links {
+        margin: 0 0.5rem 0.5rem;
     }
     .home {
         top: 0.5rem;

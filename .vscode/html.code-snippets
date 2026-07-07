@@ -34,7 +34,7 @@
 		"scope": "html",
 		"prefix": "boxlist",
 		"body": [
-			"What is the list of correct statements in the &lt;List&gt;?",
+			"Which statements in &lt;List&gt; are correct?",
 			"<small>[${1:4} points]</small>",
 			"<div class=\"box-list\">",
 			"\t<ol class=\"alpha\">",

@@ -1,6 +1,6 @@
 /* Everything fits in .exam */
 .exam {
-    counter-reset: page-total page question;
+    counter-reset: page-total 1 page 1 question 1;
     color: var(--cblack);
     background-color: var(--cbeige);
 }
@@ -16,7 +16,7 @@
     font-weight: normal;
 }
 .exam article {
-    font-family:'PT Serif', Times, serif;
+    font-family:'PT Serif', 'Libertinus Math', Times, serif;
 }
 .exam header::before, .exam article::before, .exam footer, .exam article small {
     font-family: 'Frank Ruhl Libre', serif;
@@ -73,7 +73,6 @@
 
 /* Controlling page number */
 .exam header::before {
-    counter-increment: page;
     content: counter(page);
 
     position: absolute;
@@ -81,6 +80,10 @@
     margin: 0;
     font-size: 34px;
     line-height: 34px;
+}
+.exam header::after {
+    content: "";
+    counter-increment: page;
 }
 .exam.old header::before {
     top:12px;
@@ -95,11 +98,11 @@
 /* Resetting question or page */
 .exam section.question-reset-23 {
     /* used in 2022~ */
-    counter-set: page 0 question 22;
+    counter-set: page 1 question 23;
 }
 .exam section.question-reset-26 {
     /* used in 2005~2011 */
-    counter-set: question 25;
+    counter-set: question 26;
 }
 
 /* Title (first page) */
@@ -159,7 +162,7 @@
     width: 320px;
     min-height: 50%;
     margin-top: 12px;
-    padding-left: 12px;
+    padding: 0 0 0 12px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -168,11 +171,14 @@
     font-size: 13px;
 }
 .exam article::before {
-    counter-increment: question;
     content: counter(question) ". ";
     margin-left: -12px;
     margin-right: 4px;
     font-size: 15px;
+}
+.exam article::after {
+    content: "";
+    counter-increment: question;
 }
 
 /* Question Type */
@@ -239,6 +245,7 @@
 .exam ol.col-1 li::before {
     margin-right: 6px;
 }
+.exam :is(article > ol, .select) li::before { font-size: 125%; }
 .exam :is(article > ol, .select) li:nth-child(1)::before { content: "① "; }
 .exam :is(article > ol, .select) li:nth-child(2)::before { content: "② "; }
 .exam :is(article > ol, .select) li:nth-child(3)::before { content: "③ "; }
@@ -420,10 +427,11 @@
 .exam footer::before {
     float: left;
     margin-top: -9px;
-    counter-increment: page-total;
     content: counter(page-total);
 }
 .exam footer::after {
+    content: "";
+    counter-increment: page-total 1;
     position:absolute;
     bottom: -1px;
     left: 0;
@@ -431,5 +439,4 @@
     border-top:1px solid var(--cblack);
     transform: rotate(-23.2deg);
     transform-origin: 0% 100%;
-    content: "";
 }

@@ -81,5 +81,8 @@
         page-break-before: always;
         box-shadow: none;
     }
+    .exam section:first-of-type {
+        page-break-before: initial;
+    }
     .exam img { mix-blend-mode: normal; }
 }
