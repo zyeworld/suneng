@@ -43,7 +43,7 @@ Solutions to exams since 2006 can be found in [EBSi](https://www.ebsi.co.kr/ebs/
 > Each multiple choice question has 5 choices.
 > The answer to each short answer question is an integer from 1 to 999.
 
-- No penalty for guessing wrong.
+- Guessing a question wrong gives you 0 points (same as not guessing).
 - No calculators.
 
 ### How the exam paper is structured:

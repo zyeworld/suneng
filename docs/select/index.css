@@ -1,7 +1,4 @@
 /* Fonts */
-.details0 > summary, .details1 > summary {
-    font-family: 'Roboto Slab', serif;
-}
 .links > a {
     font-family: 'Catamaran', sans-serif;
 }
@@ -21,87 +18,6 @@ body {
     background-color: var(--cnavy);
 }
 
-/* Summary */
-summary {
-    position: relative;
-    user-select: none;
-    cursor: pointer;
-}
-summary::marker { content: '' }
-
-/* Details - top level, should be structured as main > div > details.details0 */
-.details0 {
-    padding: 0.5rem;
-    min-height: 3rem;
-
-    border-radius: 2rem;
-    outline: 0px solid var(--cbeige);
-    transition: outline-width 0.1s;
-}
-.details0[open] { padding-bottom: 0; }
-.details0:hover { outline-width: 4px; }
-.details0[open]:hover { outline-width: 0; }
-
-.details0 > summary {
-    margin: -0.5rem;
-    padding: 0.5rem;
-    min-height: 3rem;
-    font-size: 1.5rem;
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.details0[open] > summary { padding-bottom: 1.375rem; }
-.details0 > summary:hover {
-    font-weight: bold;
-    color: var(--cnavy)
-}
-
-.details0 > summary::before {
-    position: absolute;
-    left: 1rem;
-    top: 1.625rem;
-
-    content: '';
-    border: solid var(--cnavy);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 4px;
-    transition: 0.3s;
-    transform: rotate(-45deg);
-}
-.details0[open] > summary::before {
-    transform: translate(0.25rem, -0.15rem) rotate(45deg);
-}
-
-
-/* Details - inside the article */
-.details1 { border-top: 2px solid var(--cnavy); }
-.details1 > summary {
-    font-size: 1.25rem;
-    padding: 0.75rem 0 0.75rem 3rem;
-}
-.details1 > summary:hover {
-    font-weight: bold;
-    color: var(--cnavy)
-}
-.details1 > summary::before {
-    position: absolute;
-    left: 1.5rem;
-    top: 1.1875rem;
-
-    content: '';
-    border: 0.4rem solid;
-    border-color: transparent transparent transparent var(--cnavy);
-    display: inline-block;
-    padding: 0;
-    transition: 0.2s;
-    transform: rotate(0deg);
-}
-.details1[open] > summary::before {
-    transform: translate(-0.15rem, 0.3rem) rotate(90deg);
-}
 
 /* Links */
 .links {
@@ -145,6 +61,5 @@ summary::marker { content: '' }
 
 @media screen and (max-width: 720px) {
     .wip { margin: 0.5rem 0.5rem 1rem; }
-    .details0 { border-radius: 0; }
     .links { margin: 0 0.5rem 0.5rem; }
 }
