@@ -17,3 +17,11 @@
     display: flex;
     justify-content: center;
 }
+.exam article {
+    width: 380px;
+    font-size: 16px;
+}
+.exam article::before {
+    content: "Q.";
+    font-weight: bold;
+}
