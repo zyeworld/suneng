@@ -10,15 +10,22 @@
     }
 }
 @media screen and (max-width: 680px) {
+    .menu-content {
+        top: 0.5rem;
+    }
+    .menu-content > summary, .menu-buttons > button {
+        padding-left: 0.5rem;
+    }
+
     .exam {
         overflow-x: auto;
     }
     .exam-type {
         display: none;
     }
-    .exam section {
+    .exam section, .show-answer .answers {
         width: 100%;
-        min-width: 360px;
+        min-width: 345px;
         min-height: 0;
         margin: 0;
         padding: 0;
@@ -28,6 +35,13 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .answers .table-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
     .exam header {
         width: 100%;
         margin-bottom: 15px;
@@ -68,21 +82,40 @@
         --cpaper: white;
         --cgray: #ccc;
         --cblack: black;
+        font-size: 16px;
     }
     html, body {
         margin: 0;
         padding: 0;
+    }
+    .menu-content {
+        display: none !important;
+    }
+    .answers {
+        height: 1123px;
+        break-after: page;
+        margin: 0;
+        overflow: hidden;
+        box-shadow: none;
+    }
+    .show-answer div.ans {
+        display: none !important;
+    }
+    .show-answer li.ans {
+        background-color: initial;
+        padding: initial;
+        border-radius: initial;
     }
     .exam section {
         width: 794px;
         height: 1123px;
         margin: 0;
         overflow: hidden;
-        page-break-before: always;
+        break-before: page;
         box-shadow: none;
     }
     .exam section:first-of-type {
-        page-break-before: initial;
+        break-before: auto;
     }
     .exam img { mix-blend-mode: normal; }
 }

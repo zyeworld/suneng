@@ -1,13 +1,5 @@
-/* Everything fits in .exam */
-.exam {
-    counter-reset: page-total 1 page 1 question 1;
-    color: var(--cblack);
-    background-color: var(--cbeige);
-}
-.MathJax { font-size: 100% !important; }
-
 /* Fonts */
-.exam h1, .exam h2, .elective-type {
+.exam h1, .exam h2, .elective-type, .menu-content, .menu-content button {
     font-family: 'Catamaran', sans-serif;
     font-weight: bold;
 }
@@ -30,25 +22,167 @@
     font-family: 'Roboto Slab', serif;
     font-weight: normal;
 }
+.answers th {
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: normal;
+}
+.answers td, div.ans {
+    font-family: 'Libertinus Math', Times, serif;
+}
 
-/* Page */
-.exam section {
-    position: relative;
-    width: 794px; /* 210mm */
-    min-height: 1123px; /* 297mm */
-    margin: 32px auto;
-    padding: 72px 64px;
+/* Menu (details) */
+.menu-content {
+    z-index: 10000;
+    position: fixed;
+    display: block;
+    top: 1rem;
+    left: 0;
+    padding: 0;
+    line-height: 3rem;
+}
+/* Menu (summary) */
+.menu-content > summary {
+    width: 3rem;
+    height: 3rem;
+    padding: 0 0.5rem 0 1rem;
+}
+.menu-content > summary::marker { content: '' }
+
+/* Menu buttons */
+.menu-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menu-buttons > button {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    width: 6.5em;
+}
+
+.menu-content > summary, .menu-buttons > button {    
+    font-size: 1.125rem;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+
+    color: var(--cnavy);
+    border: 3px solid var(--cnavy);
+    border-left: none;
+    border-radius: 0 3rem 3rem 0;
+    background-color: var(--cpaper);
+    transform-origin: 0 50%;
+    transition: transform 0.2s;
+}
+.menu-content > summary:hover, .menu-buttons > button:hover {
+    transform: scale(1.15);
+}
+.menu-content[open] > summary, .show-answer #show-answer {
+    color: var(--cpaper);
+    background-color: var(--cnavy);
+}
+
+/* Answers page */
+.answers {
+    width: 49.625em; /* 794px, 210mm */
+    margin: 2em auto;
+    padding: 2.5em 4em;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 
-    box-shadow: var(--cshadow) 6px 6px 10px;
+    box-shadow: var(--cshadow) .375em .375em .625em;
+    background-color: var(--cpaper);
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+}
+.show-answer .answers { display: flex; }
+
+
+/* Answer Table */
+.answers .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5em;
+}
+.answers .table-container table {
+    border: 3px solid var(--cblack);
+}
+.answers .info {
+    border-top: 2.5px solid var(--cblack);
+    border-bottom: 2.5px solid var(--cblack);
+}
+.answers td:nth-child(3n), .answers .info th:nth-child(3n) {
+    border-right: 2.5px solid var(--cblack);
+}
+.exam .answers td:nth-child(3n+2) {
+    font-size: 1.25em;
+}
+.exam .answers td:nth-child(3n) {
+    color: var(--cgray7);
+}
+.exam .answers th, .exam .answers td {
+    padding: 0 .25em;
+    line-height: 1.5em;
+}
+.exam .answers .row2 {
+    line-height: 3em;
+}
+
+/* Answer mark */
+div.ans { display: none; }
+.show-answer div.ans { display: block; }
+.show-answer li.ans {
+    background-color: var(--cgreen);
+    padding: 0.25em;
+    margin: -0.25em;
+    border-radius: 0.25em;
+}
+.show-answer div.ans {
+    font-size: 2em;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.show-answer div.ans span {
+    padding: 0 0.5em;
+    background-color: var(--cgreen);
+    border-radius: 0.25em;
+}
+
+
+/* Everything fits in .exam */
+.exam {
+    counter-reset: page-total 1 page 1 question 1;
+    color: var(--cblack);
+    background-color: var(--cbeige);
+}
+.MathJax { font-size: 100% !important; }
+
+/* Page */
+.exam section {
+    position: relative;
+    width: 49.625em; /* 794px, 210mm */
+    min-height: 70.1875em; /* 1123px, 297mm */
+    margin: 2em auto;
+    padding: 4.5em 4em;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    box-shadow: var(--cshadow) .375em .375em .625em;
     background-color: var(--cpaper);
 
     /* Grid settings */
     display: grid;
-    grid-template-rows: minmax(48px, auto) 1fr 48px;
+    grid-template-rows: minmax(3em, auto) 1fr 3em;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         " header header "
@@ -56,13 +190,13 @@
         " footer footer ";
 }
 .exam.old section {
-    grid-template-rows: minmax(48px, auto) 1fr 0px;
+    grid-template-rows: minmax(3em, auto) 1fr 0;
 }
 
 /* Header */
 .exam header {
     grid-area: header;
-    border-bottom: 1px solid var(--cblack);
+    border-bottom: 1.5px solid var(--cblack);
     
     position: relative;
     display: flex;
@@ -76,21 +210,21 @@
     content: counter(page);
 
     position: absolute;
-    top: 8px;
+    top: .235em;
     margin: 0;
-    font-size: 34px;
-    line-height: 34px;
+    font-size: 2.125em;
+    line-height: 1em;
 }
 .exam header::after {
     content: "";
     counter-increment: page;
 }
 .exam.old header::before {
-    top:12px;
+    top: 0.75rem;
 }
 .exam section:first-child > header::before,
 .exam section.question-reset-23 > header::before {
-    top: -8px;
+    top: -0.5rem;
 }
 .exam section:nth-of-type(odd) header::before { right: 0; }
 .exam section:nth-of-type(even) header::before { left: 0; }
@@ -107,40 +241,39 @@
 
 /* Title (first page) */
 .exam h1 {
+    text-align: center;
     margin: 0;
-    font-size: 40px;
+    font-size: 2.5em;
 }
 .exam.old h1 {
-    margin: 0 0 4px;
-    font-size: 36px;
+    margin: 0 0 .111em;
+    font-size: 2.25em;
 }
 /* Title (all other pages) */
 .exam h2 {
-    margin: 0 0 -4px;
-    font-size: 30px;
+    margin: 0 0 -.25rem;
+    font-size: 1.875em;
 }
 .exam.old h2 {
-    margin: 0 0 2px;
-    font-size: 28px;
+    margin: 0 0 .071em;
+    font-size: 1.75em;
 }
 /* Subtitle (first page) */
 .exam h3 {
-    margin: 0 0 -4px;
-    font-size: 20px;
+    margin: 0 0 -.2em;
+    font-size: 1.25em;
 }
 /* Text in rounded div */
 .exam .exam-type {
+    font-size: 1.125em;
     position: absolute;
-    bottom: 6px;
+    bottom: 0.33em;
     left: 0;
-    
-    border: 1px solid var(--cblack);
-    border-radius: 100px;
-    padding: 2px 8px;
-
-    font-size: 18px;
+    border: 1.5px solid var(--cblack);
+    border-radius: 10em;
+    padding: 0.11em 0.44em;
 }
-.exam section:nth-of-type(even) .exam-type { left: 30px; }
+.exam section:nth-of-type(even) .exam-type { left: 1.667em; }
 
 /* Question container */
 .side-l, .side-r {
@@ -149,16 +282,18 @@
 }
 .side-l {
     grid-area: side-l;
-    padding-right: 12px;
+    padding-right: 0.75em;
 }
 .side-r {
     grid-area: side-r;
-    border-left: 1px solid var(--cblack);
-    padding-left: 12px;
+    border-left: 1.5px solid var(--cblack);
+    padding-left: 0.75em;
 }
 
 /* Question */
 .exam article {
+    font-size: 13px;
+
     width: 320px;
     min-height: 50%;
     margin-top: 12px;
@@ -167,8 +302,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     line-height: 20px;
-
-    font-size: 13px;
 }
 .exam article::before {
     content: counter(question) ". ";
@@ -183,12 +316,12 @@
 
 /* Question Type */
 .exam .question-type {
+    font-size: 13px;
+
     display: inline-block;
     margin: 8px 0 0;
-    border: 1px solid var(--cblack);
+    border: 1.5px solid var(--cblack);
     padding: 2px 16px;
-
-    font-size: 13px;
 }
 /* Offseting the question after .question-type */
 .exam .question-type + article { margin-bottom: -33px; }
@@ -206,7 +339,7 @@
 /* Old question type format */
 .exam .question-type-old {
     margin: 40px 25px;
-    border: 1px solid var(--cblack);
+    border: 1.5px solid var(--cblack);
     padding: 4px;
     background-color: var(--cgray);
 
@@ -228,10 +361,12 @@
 .exam ol.col-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.1em;
 }
 .exam ol.col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0.1em;
 }
 .exam ol.col-1 {
     display: block;
@@ -276,7 +411,7 @@
 /* a box with outline */
 .exam .box, .exam .box-list {
     margin-right: 8px;
-    border: 1px solid var(--cblack);
+    border: 1.5px solid var(--cblack);
     padding: 6px 10px;
 }
 /* the <List> box */
@@ -308,7 +443,7 @@
     border-collapse: collapse;
 }
 .exam th, .exam td {
-    border: 1px solid var(--cblack);
+    border: 1.5px solid var(--cblack);
     text-align: center;
     padding: 4px 8px;
 }
@@ -374,7 +509,7 @@
 }
 .exam .divider > .line {
     flex: auto;
-    border-bottom: 1px dotted var(--cblack);
+    border-bottom: 1.5px dotted var(--cblack);
     margin: 0 6px;
     transform: translateY(-50%);
 }
@@ -420,7 +555,7 @@
     width: 48px;
     height: 15px;
     
-    border: 1px solid var(--cblack);
+    border: 1.5px solid var(--cblack);
     padding: 9px 4px 0;
     position: relative;
 
@@ -435,11 +570,11 @@
 .exam footer::after {
     content: "";
     counter-increment: page-total 1;
-    position:absolute;
+    position: absolute;
     bottom: -1px;
     left: 0;
-    width:61px;
-    border-top:1px solid var(--cblack);
+    width: 61px;
+    border-top: 1.5px solid var(--cblack);
     transform: rotate(-23.2deg);
     transform-origin: 0% 100%;
 }

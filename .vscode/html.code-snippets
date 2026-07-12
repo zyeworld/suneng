@@ -94,6 +94,33 @@
 		"description": "Reference symbol"
 	},
 
+	// Choices
+	"Choice 1": {
+		"scope": "html",
+		"prefix": "c1",
+		"body": ["①"],
+	},
+	"Choice 2": {
+		"scope": "html",
+		"prefix": "c2",
+		"body": ["②"],
+	},
+	"Choice 3": {
+		"scope": "html",
+		"prefix": "c3",
+		"body": ["③"],
+	},
+	"Choice 4": {
+		"scope": "html",
+		"prefix": "c4",
+		"body": ["④"],
+	},
+	"Choice 5": {
+		"scope": "html",
+		"prefix": "c5",
+		"body": ["⑤"],
+	},
+
 	// MathJax
 	"TeX": {
 		"scope": "html",
