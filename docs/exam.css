@@ -26,7 +26,7 @@
     font-family: 'Asap Condensed', sans-serif;
     font-weight: normal;
 }
-.answers td, div.ans {
+.answers td, .shortans {
     font-family: 'Libertinus Math', Times, serif;
 }
 
@@ -145,24 +145,25 @@
     border-bottom: 3px solid transparent !important;
 }
 
-/* Answer mark */
-div.ans { display: none; }
-.show-answer div.ans { display: block; }
-.show-answer li.ans {
-    background-color: var(--cgreen);
-    padding: 0.25em;
-    margin: -0.25em;
-    border-radius: 0.25em;
-}
-.show-answer div.ans {
+/* Short answers */
+.shortans { display: none; }
+.show-answer .shortans {
+    display: block;
     font-size: 2em;
     margin-top: 0.5em;
     line-height: 1.5em;
     text-align: center;
 }
-.show-answer div.ans span {
+.show-answer .shortans span {
     padding: 0 0.5em;
     background-color: var(--cgreen);
+    border-radius: 0.25em;
+}
+/* Multiple choice answers */
+.show-answer .choiceans {
+    background-color: var(--cgreen);
+    padding: 0.25em;
+    margin: -0.25em;
     border-radius: 0.25em;
 }
 

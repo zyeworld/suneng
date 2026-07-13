@@ -67,13 +67,13 @@
                 // Multiple Choice: Find the list element with index
                 const EL_Choices = E_Article.querySelectorAll(":is(article > ol, .select) li");
                 if (multipleChoiceIndex >= EL_Choices.length) return;
-                EL_Choices[multipleChoiceIndex].classList.add('ans');
+                EL_Choices[multipleChoiceIndex].classList.add('choiceans');
                 return;
             }
             // Short Answer: Add an answer element
-            // <div class="ans"><span>[Answer]</span></div>
+            // <div class="shortans"><span>[Answer]</span></div>
             const E_Answer = document.createElement('div');
-            E_Answer.classList.add('ans');
+            E_Answer.classList.add('shortans');
             const E_AnswerSpan = document.createElement('span');
             E_AnswerSpan.innerText = answer;
             E_Answer.appendChild(E_AnswerSpan);

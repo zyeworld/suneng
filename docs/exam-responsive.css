@@ -98,10 +98,10 @@
         overflow: hidden;
         box-shadow: none;
     }
-    .show-answer div.ans {
+    .show-answer .shortans {
         display: none !important;
     }
-    .show-answer li.ans {
+    .show-answer .choiceans {
         background-color: initial;
         padding: initial;
         border-radius: initial;

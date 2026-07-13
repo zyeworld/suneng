@@ -13,8 +13,44 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="../exam.css">
     <link rel="stylesheet" href="../exam-responsive.css">
+    <script defer src="../exam.js"></script>
   </head>
   <body class="exam">
+    <details class="menu-content">
+      <summary>Menu</summary>
+      <div class="menu-buttons">
+        <button id="show-answer">Show Ans.</button>
+        <button id="print">Print</button>
+      </div>
+    </details>
+    <div class="answers curr7ga">
+      <h1>Answers</h1>
+      <div class="table-container">
+        <table>
+          <tr><th class="row2" colspan="9">Common</th></tr>
+          <tr class="info"><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th></tr>
+          <tr><td>1</td><td>③</td><td>2</td> <td>10</td><td>③</td><td>4</td> <td>19</td><td>80</td><td>3</td></tr>
+          <tr><td>2</td><td>①</td><td>2</td> <td>11</td><td>④</td><td>4</td> <td>20</td><td>11</td><td>3</td></tr>
+          <tr><td>3</td><td>⑤</td><td>2</td> <td>12</td><td>②</td><td>3</td> <td>21</td><td>12</td><td>4</td></tr>
+          <tr><td>4</td><td>⑤</td><td>3</td> <td>13</td><td>④</td><td>3</td> <td>22</td><td>39</td><td>4</td></tr>
+          <tr><td>5</td><td>①</td><td>3</td> <td>14</td><td>②</td><td>4</td> <td>23</td><td>40</td><td>4</td></tr>
+          <tr><td>6</td><td>④</td><td>3</td> <td>15</td><td>③</td><td>4</td> <td>24</td><td>12</td><td>4</td></tr>
+          <tr><td>7</td><td>⑤</td><td>3</td> <td>16</td><td>⑤</td><td>3</td> <td>25</td><td>13</td><td>4</td></tr>
+          <tr><td>8</td><td>③</td><td>4</td> <td>17</td><td>②</td><td>4</td> <td rowspan="2" colspan="6" class="cell-br"></td></tr>
+          <tr><td>9</td><td>①</td><td>3</td> <td>18</td><td>26</td><td>3</td></tr>
+        </table>
+        <table>
+        <tr><th colspan="9">Elective</th></tr>
+        <tr><th colspan="3">Calculus</th><th colspan="3">Prob. & Stat.</th><th colspan="3">Discrete</th></tr>
+        <tr class="info"><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th></tr>
+        <tr><td>26</td><td>①</td><td>3</td> <td>26</td><td>④</td><td>3</td> <td>26</td><td>②</td><td>3</td></tr>
+        <tr><td>27</td><td>④</td><td>3</td> <td>27</td><td>③</td><td>3</td> <td>27</td><td>③</td><td>3</td></tr>
+        <tr><td>28</td><td>①</td><td>3</td> <td>28</td><td>②</td><td>3</td> <td>28</td><td>①</td><td>3</td></tr>
+        <tr><td>29</td><td>②</td><td>4</td> <td>29</td><td>①</td><td>4</td> <td>29</td><td>④</td><td>4</td></tr>
+        <tr><td>30</td><td>27</td><td>4</td> <td>30</td><td>330</td><td>4</td> <td>30</td><td>175</td><td>4</td></tr>
+      </table>
+      </div>
+    </div>
     <section>
       <header class="title">
         <h3>2005 College Scholastic Ability Test</h3>
@@ -420,7 +456,7 @@
               <td>\(&gt;\)</td>
               <td>\(\dfrac{2}{3k+3}\)</td>
             </tr>
-            <tr>
+            <tr class="choiceans">
               <td>②</td>
               <td>\(\dfrac{1}{k+1}\)</td>
               <td>\(&lt;\)</td>
@@ -490,7 +526,7 @@
               <td>local minimum</td>
               <td>\(&gt;\)</td>
             </tr>
-            <tr>
+            <tr class="choiceans">
               <td>④</td>
               <td>\(6(x-a)(x-1)\)</td>
               <td>local maximum</td>
@@ -872,7 +908,7 @@
         </article>
       </div>
       <div class="side-r">
-        <div class="question-type">Short Answer Quesetions</div>
+        <div class="question-type">Short Answer Questions</div>
         <article>
           Compute the area of the region enclosed by the curve
           \(y=3\sqrt{x-9}\), the tangent line to this curve at point \((18,9)\),
@@ -1016,7 +1052,7 @@
         </article>
       </div>
       <div class="side-r">
-        <div class="question-type">Short Answer Quesetions</div>
+        <div class="question-type">Short Answer Questions</div>
         <article>
           The following is the probability distribution table of some
           population.
@@ -1185,7 +1221,7 @@
         </article>
       </div>
       <div class="side-r">
-        <div class="question-type">Short Answer Quesetions</div>
+        <div class="question-type">Short Answer Questions</div>
         <article>
           For all positive integers \(k\) and for \(n=5^k\), \(f(n)\) satisfies
           <div class="tab">\(f(5n)=f(n)+3\:\) and \(\:f(5)=4\).</div>
