@@ -118,6 +118,9 @@
     border-top: 2.5px solid var(--cblack);
     border-bottom: 2.5px solid var(--cblack);
 }
+.exam .answers th, .exam .answers td {
+    border: 1.5px solid var(--cgray7);
+}
 .answers td:nth-child(3n), .answers .info th:nth-child(3n) {
     border-right: 2.5px solid var(--cblack);
 }
@@ -133,6 +136,13 @@
 }
 .exam .answers .row2 {
     line-height: 3em;
+}
+/* Bottom Right cell */
+.exam .answers .cell-br {
+    border-top: 3px solid var(--cblack);
+    border-left: 3px solid var(--cblack);
+    border-right: 3px solid transparent !important;
+    border-bottom: 3px solid transparent !important;
 }
 
 /* Answer mark */

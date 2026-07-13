@@ -3,7 +3,7 @@
     .exam {
         overflow-x: hidden;
     }
-    .exam section {
+    .exam section, .show-answer .answers {
         width: 100%;
         padding-left: calc(64px + (100% - 794px) / 2);
         padding-right: calc(64px + (100% - 794px) / 2);

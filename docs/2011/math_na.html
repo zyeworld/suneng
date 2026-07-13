@@ -13,8 +13,34 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="../exam.css">
     <link rel="stylesheet" href="../exam-responsive.css">
+    <script defer src="../exam.js"></script>
   </head>
   <body class="exam">
+    <details class="menu-content">
+      <summary>Menu</summary>
+      <div class="menu-buttons">
+        <button id="show-answer">Show Ans.</button>
+        <button id="print">Print</button>
+      </div>
+    </details>
+    <div class="answers">
+      <h1>Answers</h1>
+      <div class="table-container">
+        <table>
+        <tr class="info"><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th></tr>
+        <tr><td>1</td><td>②</td><td>2</td> <td>11</td><td>①</td><td>3</td> <td>21</td><td>30</td><td>3</td></tr>
+        <tr><td>2</td><td>④</td><td>2</td> <td>12</td><td>⑤</td><td>4</td> <td>22</td><td>15</td><td>4</td></tr>
+        <tr><td>3</td><td>③</td><td>2</td> <td>13</td><td>②</td><td>3</td> <td>23</td><td>100</td><td>4</td></tr>
+        <tr><td>4</td><td>③</td><td>3</td> <td>14</td><td>③</td><td>4</td> <td>24</td><td>77</td><td>4</td></tr>
+        <tr><td>5</td><td>④</td><td>3</td> <td>15</td><td>⑤</td><td>4</td> <td>25</td><td>19</td><td>4</td></tr>
+        <tr><td>6</td><td>①</td><td>3</td> <td>16</td><td>③</td><td>4</td> <td>26</td><td>①</td><td>3</td></tr>
+        <tr><td>7</td><td>③</td><td>3</td> <td>17</td><td>④</td><td>4</td> <td>27</td><td>②</td><td>3</td></tr>
+        <tr><td>8</td><td>⑤</td><td>3</td> <td>18</td><td>11</td><td>3</td> <td>28</td><td>①</td><td>4</td></tr>
+        <tr><td>9</td><td>④</td><td>3</td> <td>19</td><td>12</td><td>3</td> <td>29</td><td>④</td><td>4</td></tr>
+        <tr><td>10</td><td>②</td><td>4</td> <td>20</td><td>20</td><td>3</td> <td>30</td><td>21</td><td>4</td></tr>
+      </table>
+      </div>
+    </div>
     <section>
       <header>
         <h3>2011 College Scholastic Ability Test</h3>
@@ -49,7 +75,7 @@
           Given that
           \(\displaystyle\lim_{n\;\!\to\;\!\infty}\!\dfrac{a\times6^{n+1}-5^n}{6^n+5^n}=4\),
           what is the value of the constant \(a\)?
-          <small><div 2="" points=""></div></small>
+          <small>[2 points]</small>
           <ol>
             <li>\(\dfrac{1}{3}\)</li>
             <li>\(\dfrac{1}{2}\)</li>
@@ -63,7 +89,7 @@
         <article>
           What is the sum of all positive integers \(x\) for which
           \((3^x-5)(3^x-100)&lt;0\) is satisfied?
-          <small>[2 points]</small>
+          <small>[3 points]</small>
           <ol>
             <li>\(5\)</li>
             <li>\(7\)</li>
@@ -288,6 +314,7 @@
           \(y\)-axis, and then translating that graph \(3\) units horizontally
           and \(2\) units vertically. Given that this graph passes through the
           point \((1,4)\), what is the value of the positive number \(a\)?
+          <small>[3 points]</small>
           <ol>
             <li>\(\sqrt{2}\)</li>
             <li>\(2\)</li>
@@ -354,7 +381,7 @@
             >normal distribution, suppose \(\mathrm{P}(0 \leq Z \leq 0.52) =
             0.2\).)</span
           >
-          <small class="right">[4 points]</small>
+          <small class="right">[3 points]</small>
           <ol>
             <li>\(\dfrac{3}{8}\)</li>
             <li>\(\dfrac{7}{16}\)</li>
@@ -454,12 +481,12 @@
       </div>
       <div class="side-r">
         <article>
-          There are \(2\) Korean, Chinese, and Japanese students each. Suppose
+          There are \(2\) Korean, \(2\) Chinese, and \(2\) Japanese students. Suppose
           these \(6\) students randomly select and sit on each of the \(6\)
-          seats marked with numbers as the figure below. What is the probability
+          seats marked with numbers as shown below. What is the probability
           that each pair of students from the same country sit on seats marked
           with numbers with a difference of \(1\) or \(10\)?
-          <small>[4 points]</small>
+          <small class="right">[4 points]</small>
           <div class="center">
             <table style="width: 40%; margin: 4px">
               <tr>
