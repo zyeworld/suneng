@@ -86,15 +86,15 @@
 
 /* Answers page */
 .answers {
-    width: 49.625em; /* 794px, 210mm */
-    margin: 2em auto;
-    padding: 2.5em 4em;
+    width: 49.625rem; /* 794px, 210mm */
+    margin: 2rem auto;
+    padding: 2.5rem 4rem;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 
-    box-shadow: var(--cshadow) .375em .375em .625em;
+    box-shadow: var(--cshadow) .375rem .375rem .625rem;
     background-color: var(--cpaper);
 
     display: none;
@@ -184,16 +184,16 @@
 /* Page */
 .exam section {
     position: relative;
-    width: 49.625em; /* 794px, 210mm */
-    min-height: 70.1875em; /* 1123px, 297mm */
-    margin: 2em auto;
-    padding: 4.5em 4em;
+    width: 49.625rem; /* 794px, 210mm */
+    min-height: 70.1875rem; /* 1123px, 297mm */
+    margin: 2rem auto;
+    padding: 4.5rem 4rem;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 
-    box-shadow: var(--cshadow) .375em .375em .625em;
+    box-shadow: var(--cshadow) .375rem .375rem .625rem;
     background-color: var(--cpaper);
 
     /* Grid settings */
@@ -226,9 +226,9 @@
     content: counter(page);
 
     position: absolute;
-    top: .235em;
+    top: .5rem;
     margin: 0;
-    font-size: 2.125em;
+    font-size: 2.125rem;
     line-height: 1em;
 }
 .exam header::after {

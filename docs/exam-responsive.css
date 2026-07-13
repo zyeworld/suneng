@@ -25,7 +25,7 @@
     }
     .exam section, .show-answer .answers {
         width: 100%;
-        min-width: 345px;
+        min-width: 360px;
         min-height: 0;
         margin: 0;
         padding: 0;
@@ -57,7 +57,7 @@
         display: none;
     }
     .exam .side-l, .exam .side-r {
-        width: 321px;
+        width: 360px;
         height: auto;
         border: none;
         padding: 0;
