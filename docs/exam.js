@@ -39,14 +39,22 @@
                 23, 26, 29, 32, 35, 38, 41, 44,
                 24, 27, 30, 33, 36, 39, 42, 45
             ];
+        } else {
+            indexToAnswer = [
+                0, 3, 6, 9, 12, 15, 18, 21, 24, 27,
+                1, 4, 7, 10, 13, 16, 19, 22, 25, 28,
+                2, 5, 8, 11, 14, 17, 20, 23, 26, 29
+            ]
         }
 
         EL_Questions.forEach((E_Article, index) => {
             if (index >= indexToAnswer.length) return;
             const answerIndex = indexToAnswer[index];
             const answer = EL_Answers[answerIndex].innerHTML;
+            if (answer === '') return;
+            
             const multipleChoiceIndex = "①②③④⑤".indexOf(answer);
-            if (multipleChoiceIndex != -1) {
+            if (multipleChoiceIndex !== -1) {
                 // Multiple Choice: Find the list element with index
                 const EL_Choices = E_Article.querySelectorAll(":is(article > ol, .select) li");
                 if (multipleChoiceIndex >= EL_Choices.length) return;
