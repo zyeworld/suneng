@@ -1,28 +1,13 @@
 /* Small Screen */
 @media screen and (max-width: 820px) {
-    .exam {
-        overflow-x: hidden;
-    }
-    .exam section, .show-answer .answers {
-        width: 100%;
-        padding-left: calc(64px + (100% - 794px) / 2);
-        padding-right: calc(64px + (100% - 794px) / 2);
-    }
+    .exam { align-items: start; }
 }
 @media screen and (max-width: 680px) {
-    .menu-content {
-        top: 0.5rem;
-    }
-    .menu-content > summary, .menu-buttons > button {
-        padding-left: 0.5rem;
-    }
+    .menu-content { top: 0.5rem; }
+    .menu-content > summary, .menu-buttons > button { padding-left: 0.5rem; }
 
-    .exam {
-        overflow-x: auto;
-    }
-    .exam-type {
-        display: none;
-    }
+    .exam { margin: 0; }
+    .exam-type { display: none; }
     .exam section, .show-answer .answers {
         width: 100%;
         min-width: 360px;
@@ -47,15 +32,9 @@
         margin-bottom: 15px;
         border-top: 1px solid var(--cblack);
     }
-    .exam > section:first-child > header {
-        border-top: none;
-    }
-    .exam header::before {
-        display: none;
-    }
-    .exam footer {
-        display: none;
-    }
+    .exam > section:first-child > header { border-top: none; }
+    .exam header::before { display: none; }
+    .exam footer { display: none; }
     .exam .side-l, .exam .side-r {
         width: 360px;
         height: auto;
@@ -82,27 +61,35 @@
         --cpaper: white;
         --cgray: #ccc;
         --cblack: black;
-        font-size: 16px;
+        font-size: 16px !important;
     }
     html, body {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .exam {
+        margin: 0 !important;
+        display: block !important;
+    }
+    .exam section, .show-answer .answers {
+        width: 100% !important;
     }
     .menu-content {
         display: none !important;
     }
     .answers {
-        height: 1123px;
+        height: 1123px !important;
         break-after: page;
-        margin: 0;
-        overflow: hidden;
-        box-shadow: none;
+        margin: 0 !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
     }
     .show-answer .shortans {
         display: none !important;
     }
     .show-answer .choiceans {
-        background-color: initial;
+        background-color: initial !important;
+        margin: initial;
         padding: initial;
         border-radius: initial;
     }
@@ -110,15 +97,16 @@
         margin-left: 22px !important;
     }
     .exam section {
-        width: 794px;
-        height: 1123px;
-        margin: 0;
-        overflow: hidden;
-        break-before: page;
-        box-shadow: none;
+        width: 794px !important;
+        height: 1123px !important;
+        max-height: 1123px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        break-before: page !important;
+        box-shadow: none !important;
     }
     .exam section:first-of-type {
-        break-before: auto;
+        break-before: auto !important;
     }
-    .exam img { mix-blend-mode: normal; }
+    .exam img { mix-blend-mode: normal !important; }
 }

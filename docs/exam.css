@@ -178,6 +178,11 @@
     counter-reset: page-total 1 page 1 question 1;
     color: var(--cblack);
     background-color: var(--cbeige);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
 }
 .MathJax { font-size: 100% !important; }
 
@@ -186,7 +191,6 @@
     position: relative;
     width: 49.625rem; /* 794px, 210mm */
     min-height: 70.1875rem; /* 1123px, 297mm */
-    margin: 2rem auto;
     padding: 4.5rem 4rem;
 
     box-sizing: border-box;
