@@ -13,8 +13,34 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="../exam.css">
     <link rel="stylesheet" href="../exam-responsive.css">
+    <script defer src="../exam.js"></script>
   </head>
   <body class="exam old">
+    <details class="menu-content">
+      <summary>Menu</summary>
+      <div class="menu-buttons">
+        <button id="show-answer">Show Ans.</button>
+        <button id="print">Print</button>
+      </div>
+    </details>
+    <div class="answers">
+      <h1>Answers</h1>
+      <div class="table-container">
+        <table>
+        <tr class="info"><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th><th>#</th><th>Ans</th><th>Pts</th></tr>
+        <tr><td>1</td><td>④</td><td>1</td> <td>11</td><td>④</td><td>1</td> <td>21</td><td>⑤</td><td>1.5</td></tr>
+        <tr><td>2</td><td>③</td><td>1</td> <td>12</td><td>①</td><td>1</td> <td>22</td><td>⑤</td><td>1.5</td></tr>
+        <tr><td>3</td><td>①</td><td>1</td> <td>13</td><td>⑤</td><td>1.5</td> <td>23</td><td>①</td><td>1.5</td></tr>
+        <tr><td>4</td><td>④</td><td>1</td> <td>14</td><td>②</td><td>1</td> <td>24</td><td>①</td><td>1.5</td></tr>
+        <tr><td>5</td><td>③</td><td>1</td> <td>15</td><td>①</td><td>1.5</td> <td>25</td><td>②</td><td>2</td></tr>
+        <tr><td>6</td><td>⑤</td><td>1</td> <td>16</td><td>①</td><td>1.5</td> <td>26</td><td>④</td><td>2</td></tr>
+        <tr><td>7</td><td>③</td><td>1</td> <td>17</td><td>③</td><td>1.5</td> <td>27</td><td>②</td><td>1.5</td></tr>
+        <tr><td>8</td><td>②</td><td>1</td> <td>18</td><td>③</td><td>1</td> <td>28</td><td>④</td><td>1.5</td></tr>
+        <tr><td>9</td><td>⑤</td><td>1</td> <td>19</td><td>④</td><td>1.5</td> <td>29</td><td>③</td><td>2</td></tr>
+        <tr><td>10</td><td>②</td><td>1.5</td> <td>20</td><td>⑤</td><td>1</td> <td>30</td><td>①</td><td>2</td></tr>
+      </table>
+      </div>
+    </div>
     <section>
       <header>
         <h3>1996 College Scholastic Ability Test</h3>
@@ -379,28 +405,28 @@
               <td>\((\alpha)\)</td>
               <td>\((\beta)\)</td>
             </tr>
-            <tr>
-              <td>①</td>
+            <tr class="choiceans">
+              <td class="choicenumber">①</td>
               <td>\(S \in S\)</td>
               <td>\(\{A \,\big|\, A \notin A, \:A\) is a set \(\}\)</td>
             </tr>
             <tr>
-              <td>②</td>
+              <td class="choicenumber">②</td>
               <td>\(S \in S\)</td>
               <td>\(\{A \,\big|\, A \nsubseteq A, \:A\) is a set \(\}\)</td>
             </tr>
             <tr>
-              <td>③</td>
+              <td class="choicenumber">③</td>
               <td>\(S \in S\)</td>
               <td>\(\{A \,\big|\, A \in A, \:A\) is a set \(\}\)</td>
             </tr>
             <tr>
-              <td>④</td>
+              <td class="choicenumber">④</td>
               <td>\(S \subseteq S\)</td>
               <td>\(\{A \,\big|\, A \notin A, \:A\) is a set \(\}\)</td>
             </tr>
             <tr>
-              <td>⑤</td>
+              <td class="choicenumber">⑤</td>
               <td>\(S \subseteq S\)</td>
               <td>\(\{A \,\big|\, A \subseteq A, \:A\) is a set \(\}\)</td>
             </tr>
@@ -530,27 +556,27 @@
               <td>\((\beta)\)</td>
             </tr>
             <tr>
-              <td>①</td>
+              <td class="choicenumber">①</td>
               <td>\(\overline{\mathrm{AC}} = \overline{\mathrm{AD}}\)</td>
               <td>\(\overline{\mathrm{CE}} = \overline{\mathrm{BE}}\)</td>
             </tr>
             <tr>
-              <td>②</td>
+              <td class="choicenumber">②</td>
               <td>\(\overline{\mathrm{AC}} = \overline{\mathrm{DC}}\)</td>
               <td>\(\overline{\mathrm{CE}} = \overline{\mathrm{BE}}\)</td>
             </tr>
             <tr>
-              <td>③</td>
+              <td class="choicenumber">③</td>
               <td>\(\overline{\mathrm{AD}} = \overline{\mathrm{CD}}\)</td>
               <td>\(\overline{\mathrm{CB}} = \overline{\mathrm{BE}}\)</td>
             </tr>
             <tr>
-              <td>④</td>
+              <td class="choicenumber">④</td>
               <td>\(\overline{\mathrm{AC}} = \overline{\mathrm{AD}}\)</td>
               <td>\(\overline{\mathrm{CE}} = \overline{\mathrm{CB}}\)</td>
             </tr>
-            <tr>
-              <td>⑤</td>
+            <tr class="choiceans">
+              <td class="choicenumber">⑤</td>
               <td>\(\overline{\mathrm{AC}} = \overline{\mathrm{DC}}\)</td>
               <td>\(\overline{\mathrm{CE}} = \overline{\mathrm{CB}}\)</td>
             </tr>
@@ -599,35 +625,35 @@
               <td>\((\delta)\)</td>
             </tr>
             <tr>
-              <td>①</td>
+              <td class="choicenumber">①</td>
               <td>even</td>
               <td>\(0\)</td>
               <td>odd</td>
               <td>\(x^2+px=2q\)</td>
             </tr>
             <tr>
-              <td>②</td>
+              <td class="choicenumber">②</td>
               <td>even</td>
               <td style="line-height: 12px">a quadratic equation</td>
               <td>odd</td>
               <td>\(2q\) is even</td>
             </tr>
             <tr>
-              <td>③</td>
+              <td class="choicenumber">③</td>
               <td>an integer</td>
               <td>\(0\)</td>
               <td>even</td>
               <td>\(x^2+px=2q\)</td>
             </tr>
             <tr>
-              <td>④</td>
+              <td class="choicenumber">④</td>
               <td>odd</td>
               <td style="line-height: 12px">a quadratic equation</td>
               <td>even</td>
               <td>\(2q\) is even</td>
             </tr>
-            <tr>
-              <td>⑤</td>
+            <tr class="choiceans">
+              <td class="choicenumber">⑤</td>
               <td>odd</td>
               <td>\(0\)</td>
               <td>even</td>
@@ -667,27 +693,27 @@
               <td>\((\beta)\)</td>
             </tr>
             <tr>
-              <td>①</td>
+              <td class="choicenumber">①</td>
               <td>\(\mathrm{P}(A_n \cap B_n)\)</td>
               <td>\(\frac{1}{10}\)</td>
             </tr>
             <tr>
-              <td>②</td>
+              <td class="choicenumber">②</td>
               <td>\(\mathrm{P}(B_n)\)</td>
               <td>\(\frac{1}{10}\)</td>
             </tr>
             <tr>
-              <td>③</td>
+              <td class="choicenumber">③</td>
               <td>\(\mathrm{P}(B_n)\)</td>
               <td>\(\frac{1}{9}\)</td>
             </tr>
             <tr>
-              <td>④</td>
+              <td class="choicenumber">④</td>
               <td>\(\mathrm{P}(B_n | A_n)\)</td>
               <td>\(\frac{9}{10}\)</td>
             </tr>
-            <tr>
-              <td>⑤</td>
+            <tr class="choiceans">
+              <td class="choicenumber">⑤</td>
               <td>\(\mathrm{P}(B_n | A_n)\)</td>
               <td>\(\frac{1}{10}\)</td>
             </tr>
@@ -772,27 +798,27 @@
               <td>[Maximum value]</td>
             </tr>
             <tr>
-              <td>①</td>
+              <td class="choicenumber">①</td>
               <td>\(\dfrac{\sqrt{2}}{4}\)</td>
               <td>\(\dfrac{\sqrt{85}}{2}\)</td>
             </tr>
             <tr>
-              <td>②</td>
+              <td class="choicenumber">②</td>
               <td>\(\dfrac{5\sqrt{2}}{4}\)</td>
               <td>\(\dfrac{\sqrt{101}}{2}\)</td>
             </tr>
             <tr>
-              <td>③</td>
+              <td class="choicenumber">③</td>
               <td>\(\dfrac{3\sqrt{2}}{4}\)</td>
               <td>\(\dfrac{\sqrt{85}}{2}\)</td>
             </tr>
-            <tr>
-              <td>④</td>
+            <tr class="choiceans">
+              <td class="choicenumber">④</td>
               <td>\(\dfrac{3\sqrt{2}}{4}\)</td>
               <td>\(\dfrac{\sqrt{101}}{2}\)</td>
             </tr>
             <tr>
-              <td>⑤</td>
+              <td class="choicenumber">⑤</td>
               <td>\(\dfrac{\sqrt{2}}{4}\)</td>
               <td>\(\dfrac{\sqrt{101}}{2}\)</td>
             </tr>
@@ -815,7 +841,7 @@
           </div>
           <ol class="col-1">
             <li>\(2000\)</li>
-            <li>\(4000\)</li>
+            <li style="width: 5rem;">\(4000\)</li>
             <li>\(6000\)</li>
             <li>\(8000\)</li>
             <li>\(10000\)</li>

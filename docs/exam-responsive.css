@@ -106,6 +106,9 @@
         padding: initial;
         border-radius: initial;
     }
+    .exam ol.col-1 .choiceans {
+        margin-left: 22px !important;
+    }
     .exam section {
         width: 794px;
         height: 1123px;
