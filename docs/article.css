@@ -88,7 +88,6 @@ summary {
     user-select: none;
     cursor: pointer;
 }
-summary::marker { content: '' }
 
 /* Details - top level, should be structured as main > div > details.details0 */
 .details0 {

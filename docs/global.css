@@ -20,6 +20,14 @@ html, body {
     padding: 0;
 }
 
+details summary::marker { content: '' }
+details summary::-ms-details-marker { display: none; }
+details summary::-moz-details-marker { display: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::-ms-marker { display: none; }
+details summary::-moz-marker { display: none; }
+details summary::-webkit-marker { display: none; }
+
 /* Hide and Show with size */
 .show400 { display: none; }
 @media screen and (max-width: 400px) {
