@@ -48,7 +48,7 @@
                 26, 29, 32, 35, 38,
                 27, 30, 33, 36, 39
             ]
-        } else if (E_Answers.classList.contains('1994')) {
+        } else if (E_Answers.classList.contains('1994') || E_Answers.classList.contains('20')) {
             indexToAnswer = [
                 0, 3, 6, 9, 12, 15, 18,
                 1, 4, 7, 10, 13, 16, 19,

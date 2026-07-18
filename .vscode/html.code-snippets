@@ -95,31 +95,21 @@
 	},
 
 	// Choices
-	"Choice 1": {
-		"scope": "html",
-		"prefix": "c1",
-		"body": ["①"],
-	},
-	"Choice 2": {
-		"scope": "html",
-		"prefix": "c2",
-		"body": ["②"],
-	},
-	"Choice 3": {
-		"scope": "html",
-		"prefix": "c3",
-		"body": ["③"],
-	},
-	"Choice 4": {
-		"scope": "html",
-		"prefix": "c4",
-		"body": ["④"],
-	},
-	"Choice 5": {
-		"scope": "html",
-		"prefix": "c5",
-		"body": ["⑤"],
-	},
+	"Choice 1": { "scope": "html", "prefix": "c1", "body": ["①"] },
+	"Choice 2": { "scope": "html", "prefix": "c2", "body": ["②"] },
+	"Choice 3": { "scope": "html", "prefix": "c3", "body": ["③"] },
+	"Choice 4": { "scope": "html", "prefix": "c4", "body": ["④"] },
+	"Choice 5": { "scope": "html", "prefix": "c5", "body": ["⑤"] },
+	// Circled letters
+	"Circle a": { "scope": "html", "prefix": "ca", "body": ["<h6>ⓐ</h6>"] },
+	"Circle b": { "scope": "html", "prefix": "cb", "body": ["<h6>ⓑ</h6>"] },
+	"Circle c": { "scope": "html", "prefix": "cc", "body": ["<h6>ⓒ</h6>"] },
+	"Circle d": { "scope": "html", "prefix": "cd", "body": ["<h6>ⓓ</h6>"] },
+	"Circle e": { "scope": "html", "prefix": "ce", "body": ["<h6>ⓔ</h6>"] },
+	"Circle x": { "scope": "html", "prefix": "cx", "body": ["<h6>ⓧ</h6>"] },
+	"Circle y": { "scope": "html", "prefix": "cy", "body": ["<h6>ⓨ</h6>"] },
+	"Circle z": { "scope": "html", "prefix": "cz", "body": ["<h6>ⓩ</h6>"] },
+
 
 	// MathJax
 	"TeX": {

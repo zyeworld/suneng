@@ -3,11 +3,11 @@
     font-family: 'Catamaran', sans-serif;
     font-weight: bold;
 }
-.exam h3, .exam .exam-type {
+.exam h3, .exam .exam-type, .sans {
     font-family: 'Asap Condensed', sans-serif;
     font-weight: normal;
 }
-.exam article {
+.exam article, .exam h6 {
     font-family:'PT Serif', 'Libertinus Math', Times, serif;
 }
 .exam header::before, .exam article::before, .exam footer, .exam article small {
@@ -312,8 +312,6 @@
 
 /* Question */
 .exam article {
-    font-size: .8125rem;
-
     width: 20rem;
     min-height: 50%;
     margin-top: .75rem;
@@ -321,7 +319,15 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    line-height: 1.25rem;
+    font-size: .8125rem;
+    line-height: 1.53em;
+}
+.exam.dense article {
+    min-height: unset;
+}
+.exam.dense article {
+    font-size: .75rem;
+    line-height: 1.2em;
 }
 .exam article::before {
     content: counter(question) ". ";
@@ -378,6 +384,7 @@
     /* list-style-type: symbols(cyclic "①" "②" "③" "④" "⑤"); */
     list-style-type: none;
 }
+.exam.dense article > ol, .exam.dense .select { margin: .5rem 0 0; }
 .exam ol.col-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -434,6 +441,10 @@
     border: 1.5px solid var(--cblack);
     padding: .375rem .625rem;
 }
+.exam.dense .box, .exam.dense .box-list {
+    margin-right: 0;
+    padding: .25rem .375rem;
+}
 /* the <List> box */
 .exam .box-list { position: relative; }
 .exam .box-list::before {
@@ -446,16 +457,30 @@
     text-align: center;
     background-color: var(--cpaper);
 }
+.exam.dense .box-list::before {
+    transform: translateX(-50%) translateY(-.5rem);
+}
 .exam .tab, .exam .center, .exam .box, .exam .box-list {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.exam.dense .tab, .exan.dense .center, .exam.dense .box {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.exam.dense .box-list { margin-bottom: .5em; }
 /* Used in 'questions 13-14' in 2014-2016 */
 .exam .flavor-sans {
     margin-top: .25rem;
     margin-left: .75rem;
     text-indent: -.75rem;
     font-size: .8125rem;
+}
+/* Big text */
+h6 {
+    display: inline;
+    font-size: 125%;
+    font-weight: inherit;
 }
 
 /* table */
@@ -467,6 +492,8 @@
     text-align: center;
     padding: .25rem .5rem;
 }
+.exam .noborder, .exam .noborder th, .exam .noborder td { border: none; }
+.exam.dense th, .exam.dense td { padding: 0 .2rem; }
 .exam table.no-border th, .exam table.no-border td { border: none; }
 .exam table.short th, .exam table.short td {
     padding: 0 .5rem;
@@ -482,11 +509,16 @@
     /* Why is ::marker not supported on my phone? */
 }
 .exam ol.upper > li, .exam ol.lower > li { margin: .125rem 0 .125rem 1.5rem; }
+.exam.dense ol.upper > li, .exam.dense ol.lower > li { margin: .125rem 0 .125rem 1.125rem; }
 .exam ol.upper > li::before, .exam ol.lower > li::before {
     display: inline-block;
     letter-spacing: -0.5px;
     width: 1.5rem;
     margin-left: -1.5rem;
+}
+.exam.dense ol.upper > li::before, .exam.dense ol.lower > li::before {
+    width: 1.125rem;
+    margin-left: -1.125rem;
 }
 .exam ol.upper > li:nth-child(1)::before { content: "(A)"; }
 .exam ol.upper > li:nth-child(2)::before { content: "(B)"; }
@@ -502,6 +534,7 @@
     padding-inline-start: 0;
 }
 .exam .box ul > li { margin: .125rem 0 .125rem 1.5rem; }
+.exam.dense .box ul > li { margin: .125rem 0 .125rem 1.125rem; }
 
 /* (i) (ii) (iii) - used in .box between paragraphs */
 .exam ol.roman {
